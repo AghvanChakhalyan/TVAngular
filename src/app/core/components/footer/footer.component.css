@@ -1,0 +1,9 @@
+.footer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #59585a;
+    padding: 20px 10px;
+}
+.footer p{
+    text-align: center;
+}

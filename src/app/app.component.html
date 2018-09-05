@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+<div class="tv" [ngClass]="{'tvON':TVon}">
+    <div class="btn"></div>
+    <p *ngIf="TVon">volume:{{volume}}</p>
+    <p *ngIf="TVon">chanel:{{channel}}</p>
+    <img *ngIf="ok" src="../assets/images/smart.jpg" class="menu" alt="smart">
+    <div *ngIf="TVon" [ngSwitch]="channel">
+        <iframe *ngSwitchCase="1" width="500" height="220" src="https://www.youtube.com/embed/bJBv7aHD8FE"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="2" width="500" height="220" src="https://www.youtube.com/embed/pQaX2xVcGmY"
+                frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="3" width="500" height="220" src="https://www.youtube.com/embed/3vL6Fg8_RGU"
+                frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="4" width="500" height="220" src="https://www.youtube.com/embed/M_vzKIF2-aQ"
+                frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="5" width="500" height="220" src="https://www.youtube.com/embed/_u7DrK2YJHw"
+                frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="6" width="500" height="220" src="https://www.youtube.com/embed/kgFVB7RXOUk"
+                frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe *ngSwitchCase="7" width="500" height="220" src="https://www.youtube.com/embed/hT6BglYpbM8" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+<app-remote-control (power)="onTv($event)" (increment)="incrementVolume($event)"
+                    (decrement)="decrementVolume($event)" (okEvent)="onMenu($event)"
+                    (channelUp)="changeChannelUp($event)"
+                    (channelDown)="changeChannelDown($event)">
+</app-remote-control>
+
+<app-footer></app-footer>

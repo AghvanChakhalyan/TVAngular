@@ -1,0 +1,13 @@
+.rmc {
+  width: 80px;
+  border-radius: 2em;
+  background-color: aqua;
+  padding: 10px 5px;
+  text-align: center;
+  margin: 20px auto;
+  border: 1px solid blue;
+}
+
+.rmc button {
+  background: transparent;
+}
